@@ -1,25 +1,19 @@
 export default function createIteratorObject(report) {
-  const all = Object.values(report.allEmployees).reduce((a, b) => {
-    a.push(...b);
-    return a;
+  const employees = Object.values(report.allEmployees).reduce((occ1, occ2) => {
+    occ1.push(...occ2);
+    return occ1;
   }, []);
-  let currIndex = 0;
-  const maxIndex = all.length;
+  let idx = 0;
+  const maxidx = employees.length;
   return {
     next() {
-      if (currIndex < maxIndex) {
-        const result = { value: all[currIndex], done: false };
-        currIndex += 1;
+      if (idx < maxidx) {
+        const result = { value: employees[idx], done: false };
+        idx += 1;
         return result;
       }
       return { value: null, done: true };
     },
-    * [Symbol.iterator]() {
-      let currentIndex = 0;
-      while (currentIndex < maxIndex) {
-        yield all[currentIndex];
-        currentIndex++;
-      }
-    },
+    [Symbol.iterator]: () => this.next(),
   };
 }
