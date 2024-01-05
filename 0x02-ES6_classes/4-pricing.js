@@ -3,7 +3,7 @@ import Currency from './3-currency';
 export default class Pricing {
   constructor(amount, currency) {
     if (typeof amount !== 'number' || !(currency instanceof Currency)) {
-      throw new TypeError('Attribute type error');
+      throw new Error();
     }
     this._amount = amount;
     this._currency = currency;
@@ -26,13 +26,13 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
+    return `${this.amount} ${this.currency.name} (${this.currency.code})`;
   }
 
   static convertPrice(amount, convertionRate) {
     if (typeof amount !== 'number' || typeof convertionRate !== 'number') {
-      throw new TypeError('Type mismatch');
+      throw new Error();
     }
-    return this.amount * this.convertionRate;
+    return amount * convertionRate;
   }
 }
