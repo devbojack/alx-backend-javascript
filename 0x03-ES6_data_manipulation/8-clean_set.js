@@ -1,16 +1,10 @@
 export default function cleanSet(set, startString) {
-  if (startString.length < 1) {
+  if (!startString || !startString.length) {
     return '';
   }
+  const matchedValues = Array.from(set)
+    .filter((value) => value.startsWith(startString))
+    .map((value) => value.slice(startString.length));
 
-  const matchedWords = [];
-  let joined = '';
-
-  set.forEach((element) => {
-    if (element.startsWith(startString)) {
-      matchedWords.push((element.substring(startString.length)));
-    }
-  });
-  joined = matchedWords.join('-');
-  return joined;
+  return matchedValues.join('-');
 }
