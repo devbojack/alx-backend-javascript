@@ -58,3 +58,9 @@ export function executeWork(employee: Teacher | Director){
     }
     return work;
 }
+
+type Subjects = "Math" | "History";
+
+export function teachClass(todayClass: Subjects): string | boolean{
+    return (todayClass === 'Math') ? 'Teaching Math' : (todayClass === "History") ? 'Teaching History' : `${undefined}`;
+}
