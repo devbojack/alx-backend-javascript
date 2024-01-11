@@ -43,3 +43,18 @@ export function createEmployee(salary: string | number) : Director | Teacher{
     }
     return new Director();
 }
+
+export function isDirector(employee: TeacherInterface | DirectorInterface): employee is Director {
+    return (employee as Director).workDirectorTasks() !== undefined;
+}
+
+export function executeWork(employee: Teacher | Director){
+    let work = undefined;
+    if (employee instanceof Director){
+        work = employee.workDirectorTasks();
+    }
+    if(employee instanceof Teacher){
+        work = employee.workTeacherTasks();
+    }
+    return work;
+}
