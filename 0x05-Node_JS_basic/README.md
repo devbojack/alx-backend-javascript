@@ -399,19 +399,22 @@ bob@dylan:~$
 <br>
 
    
-6. Create a small HTTP server using Express
-mandatory
-Install Express and in a file named 6-http_express.js, create a small HTTP server using Express module:
+## 6. Create a small HTTP server using Express
+Install Express and in a file named `6-http_express.js`, create a small HTTP server using Express module:
 
-It should be assigned to the variable app and this one must be exported
-HTTP server should listen on port 1245
-Displays Hello Holberton School! in the page body for the endpoint /
+- It should be assigned to the variable `app` and this one must be exported
+- HTTP server should listen on port 1245
+- Displays `Hello Holberton School!` in the page body for the endpoint /
+
 In terminal 1:
 
+```
 bob@dylan:~$ node 6-http_express.js
 ...
+```
 In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
@@ -427,14 +430,18 @@ bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
 </body>
 </html> 
 bob@dylan:~$ 
-Repo:
+```
+<hr>
 
-GitHub repository: alx-backend-javascript
-Directory: 0x05-Node_JS_basic
-File: 6-http_express.js
+**Repo:**
+- GitHub repository: alx-backend-javascript
+- Directory: 0x05-Node_JS_basic
+- File: 6-http_express.js
+<hr>
+<br>
    
-7. Create a more complex HTTP server using Express
-mandatory
+
+## 7. Create a more complex HTTP server using Express
 In a file named 7-http_express.js, recreate the small HTTP server using Express:
 
 It should be assigned to the variable app and this one must be exported
@@ -445,10 +452,14 @@ When the URL path is /students, it should display This is the list of our studen
 CSV file can contain empty lines (at the end) - and they are not a valid student!
 Terminal 1:
 
+```
 bob@dylan:~$ node 7-http_express.js database.csv
 ...
+```
+
 In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
@@ -458,14 +469,17 @@ Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 bob@dylan:~$ 
-Repo:
+```
+<hr>
 
-GitHub repository: alx-backend-javascript
-Directory: 0x05-Node_JS_basic
-File: 7-http_express.js
+**Repo:**
+- GitHub repository: `alx-backend-javascript`
+- Directory: `0x05-Node_JS_basic`
+- File: `7-http_express.js`
+<hr>
+<br>
    
-8. Organize a complex HTTP server using Express
-mandatory
+## 8. Organize a complex HTTP server using Express
 Obviously writing every part of a server within a single file is not sustainable. Let’s create a full server in a directory named full_server.
 
 Since you have used ES6 and Babel in the past projects, let’s use babel-node to allow to use ES6 functions like import or export.
