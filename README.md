@@ -2,4 +2,4 @@
 
 By [Justus Lolwerikoi]()
 
-![](/pngs/alx_do-hard-things.jpeg)
+![](/assets/alx_do-hard-things.jpeg)

@@ -5,7 +5,7 @@
 | Back-end | JavaScript | ES6 | NodeJS | ExpressJS |
 | | | | |
 
-![](/pngs/0x05.jpeg)
+![](/assets/0x05.jpeg)
 
 ## Resources
 **Read or watch:**
